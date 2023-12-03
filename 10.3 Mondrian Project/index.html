@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: grid;
+      grid-template-columns: 320px 419px ;
+      grid-template-rows: 414px 325px;
+      gap: 9px;
+      
+    }
+
+    #red{
+      background-color: #e72f24;
+      width: 320px;
+      height: 414px;
+      
+    } 
+
+    #first{
+        background-color: #f0f1ec;
+        height: 414px;
+        width: 428px;
+    }
+    #second{
+        background-color: #f0f1ec;
+        height: 325px;
+        width: 320px;
+    }
+
+    #third{
+      background-color: #f0f1ec;
+      height: 325px;
+      width: 360px;
+    }
+    
+    #fourth{
+      background-color: #f0f1ec;
+      width: 320px;
+      height: 20px;
+    }
+    
+    .yellow{
+      background-color: #F9D01E;
+      width: 198px;
+      height: 20px;
+    }
+
+    .black{
+        background-color: black;
+        height: 20px;
+        width: 153px;
+    }
+    
+    
+    .blue{
+      background-color: #004592;
+      height: 130px;
+      width: 50px;
+    }
+
+    #fifth{
+      background-color: #f0f1ec;
+      height: 184px;
+      width: 50px;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div id="red" class="red box"></div>
+  <div id="first" class="grey box"></div>
+  <div id="second" class="grey box"></div>
+  <div id="third" class="grey box"></div>
+  <div id="fourth" class="grey box"></div>
+  <div id="fifth" class="grey box"></div>
+  <div class="yellow box"></div>
+  <div class="blue box"></div>
+  <div class="black box"></div>
+
+</body>
+
+</html>
