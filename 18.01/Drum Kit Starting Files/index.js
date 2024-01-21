@@ -1,42 +1,49 @@
-document.querySelector(".w").addEventListener("click",function  (){
-    var w = new Audio("sounds/tom-1.mp3");
-    w.play()
+var numberOfDrumsButtons = document.querySelectorAll(".drum").length;
+
+for (var i = 0; i < numberOfDrumsButtons; i++) {
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+        var buttonInnerHTML = this.innerHTML;
+        makeSound(buttonInnerHTML);
+    });
+}
+document.addEventListener("keypress", function (event) {
+    makeSound(event.key)
 })
+function makeSound(key) {
+    switch (key) {
+        case "w":
+            var tom1 = new Audio("sounds/tom-1.mp3");
+            tom1.play();
+            break;
 
+        case "a":
+            var tom2 = new Audio("sounds/tom-2.mp3");
+            tom2.play();
+            break;
 
-document.querySelector(".a").addEventListener("click",function  (){
-    var w = new Audio("sounds/tom-2.mp3");
-    w.play()
-})
+        case "s":
+            var tom3 = new Audio("sounds/tom-3.mp3");
+            tom3.play();
+            break;
 
+        case "d":
+            var tom4 = new Audio("sounds/tom-4.mp3");
+            tom4.play();
+            break;
 
-document.querySelector(".s").addEventListener("click",function  (){
-    var w = new Audio("sounds/tom-3.mp3");
-    w.play()
-})
+        case "j":
+            var crash = new Audio("sounds/crash.mp3");
+            crash.play();
+            break;
 
+        case "k":
+            var kick_bass = new Audio("sounds/kick-bass.mp3");
+            kick_bass.play();
+            break;
 
-document.querySelector(".d").addEventListener("click",function  (){
-    var w = new Audio("sounds/tom-4.mp3");
-    w.play()
-})
-
-
-document.querySelector(".j").addEventListener("click",function  (){
-    var w = new Audio("sounds/crash.mp3");
-    w.play()
-})
-
-document.querySelector(".k").addEventListener("click",function  (){
-    var w = new Audio("sounds/kick-bass.mp3");
-    w.play()
-})
-
-
-document.querySelector(".l").addEventListener("click",function  (){
-    var w = new Audio("sounds/snare.mp3");
-    w.play()
-})
-
-
-
+        case "l":
+            var snare = new Audio("sounds/snare.mp3");
+            snare.play();
+            break;
+    }
+}
